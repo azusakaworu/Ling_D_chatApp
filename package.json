@@ -1,0 +1,17 @@
+{
+  "name": "ling_d_chatapp",
+  "version": "1.0.0",
+  "description": "shocial media app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Ling Ding",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.4"
+  },
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
+}
