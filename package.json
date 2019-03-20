@@ -8,10 +8,9 @@
   },
   "author": "Ling Ding",
   "license": "ISC",
-  "devDependencies": {
-    "express": "^4.16.4"
-  },
+ 
   "dependencies": {
+    "express": "~4.16.0",
     "socket.io": "^2.2.0"
   }
 }
