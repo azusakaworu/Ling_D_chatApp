@@ -8,6 +8,8 @@ function logConnect({sID,message}){//
     vm.socketID = sID;
 }
 
+
+//给vm 里面push新message
 function appendMessage(message){
     vm.messages.push(message);
 }
@@ -24,7 +26,7 @@ const vm = new Vue({
 
     methods:{
         dispatchMessage(){
-            socket.emit('chat message',{content:this.message, name: this.nickname ||"Anonymous" });
+            socket.emit('chat message',{content:this.message, name: this.nickname ||"Azusakaworu" });
 
             this.message = "";
 
