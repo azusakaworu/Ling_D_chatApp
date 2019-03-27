@@ -8,8 +8,8 @@ function logConnect({sID,message}){//
     vm.socketID = sID;
 }
 
-function appendMessage(){
-    vm.message.push(message);
+function appendMessage(message){
+    vm.messages.push(message);
 }
 
 //create vue instance
@@ -27,7 +27,7 @@ const vm = new Vue({
             socket.emit('chat message',{content:this.message, name: this.nickname ||"Anonymous" });
 
             this.message = "";
-            
+
 
         }
     },
