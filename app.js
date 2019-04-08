@@ -48,7 +48,7 @@ io.on('connection', function(socket){
            io.emit('chat message',{id:`${socket.id}`,message:msg});
            //io.emit('tweet',{id:`${socket.id}`,message:msg});
      });
-
+     
    socket.on('disconnect',function(){
        console.log('a user has disconnected');
        io.emit('leave',`${socket.id} has left the chat`);

@@ -1,43 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Socket IO Chat with Node!</title>
 	<link rel="stylesheet" href="css/main.css">
-	<script src="https://unpkg.com/vue"></script> 
+	<script src="https://unpkg.com/vue"></script>
 </head>
+
 <body>
-	<main id="app">		
+	<main id="app">
 		<section class="form-container">
 			<label for="nickname">Your Nickname (optional)</label>
-			<input v-model ="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
-			
+			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
+
 			<form>
 				<label for="message">Something to say?</label>
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input type="submit" @click.prevent = "dispatchMessage" >
+				<input type="submit" @click.prevent="dispatchMessage">
 			</form>
 
 			<p>{{typeNotification.message}}</p>
-			
+
 		</section>
-		
-         
+
+
 
 
 
 		<section class="messages">
-			<ul id="messages" v-for="message in messages">
+			<!-- transition  -->
+			
+				<ul id="messages" v-for="message in messages">
 					<p>{{enterNotification}}</p>
+
+					<!-- reder a now component for every message -->
+
+					<transition name=fade>
+						<newmessage :msg="message"></newmessage>
+					</transition>
+					   
+				   
 					
-                <!-- reder a now component for every message -->
-                <newmessage :msg="message"></newmessage>
-				<p>{{leaveNotification}}</p>
-			</ul>
-		</section>	
+
+					<p>{{leaveNotification}}</p>
+				</ul>
+			
+
+		</section>
 
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>
 </body>
+
 </html>

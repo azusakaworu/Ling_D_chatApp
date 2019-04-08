@@ -1,5 +1,8 @@
 import ChatMessage from './modules/ChatMessage.js';
 const socket = io();
+// const el = document.querySelector('.transition');
+
+
 
 function logConnect({sID,message}){//
     // debugger;
@@ -17,21 +20,23 @@ function appendMessage(message){
 
 function typingNotification(msg){
     //console.log('someone is typeing message....');
-    vm.typeNotification =msg;
+    vm.typeNotification = msg;
    
 }
 
 function enterNotification(msg){
     console.log('someone joins chatting....');
-    vm.enterNotification=msg;
+    vm.enterNotification = msg;
    
 }
 
 function leaveNotification(msg){
     console.log('someone left....');
-    vm.leaveNotification =msg;
+    vm.leaveNotification = msg;
    
 }
+
+
 
 
 //create vue instance
@@ -43,10 +48,17 @@ const vm = new Vue({
         messages:[],
         typeNotification:"",
         enterNotification:"",
-        leaveNotification:""
+        leaveNotification:"",
+        // show: true,
+        // transitionName: 'fade'
+        //msgcolor: "#"+((1<<24)*Math.random()|0).toString(16)
+        
 
 
     },
+    //  created(){
+    //      this.msgcolor = ;
+    //  },
 
     methods:{
         dispatchMessage(){
