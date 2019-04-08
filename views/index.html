@@ -28,11 +28,11 @@
 
 		<section class="messages">
 			<ul id="messages" v-for="message in messages">
-					<p>{{enterNotification.message}}</p>
+					<p>{{enterNotification}}</p>
 					
                 <!-- reder a now component for every message -->
                 <newmessage :msg="message"></newmessage>
-				<p>{{leaveNotification.message}}</p>
+				<p>{{leaveNotification}}</p>
 			</ul>
 		</section>	
 
