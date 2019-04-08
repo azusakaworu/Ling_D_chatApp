@@ -17,15 +17,25 @@
 				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
 				<input type="submit" @click.prevent = "dispatchMessage" >
 			</form>
+
+			<p>{{typeNotification.message}}</p>
+			
 		</section>
 		
+         
+
+
+
 		<section class="messages">
 			<ul id="messages" v-for="message in messages">
+					<p>{{enterNotification.message}}</p>
+					
                 <!-- reder a now component for every message -->
                 <newmessage :msg="message"></newmessage>
-				
+				<p>{{leaveNotification.message}}</p>
 			</ul>
-		</section>		
+		</section>	
+
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>

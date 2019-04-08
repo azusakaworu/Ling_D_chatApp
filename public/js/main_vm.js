@@ -14,13 +14,37 @@ function appendMessage(message){
     vm.messages.push(message);
 }
 
+
+function typingNotification(msg){
+    //console.log('someone is typeing message....');
+    vm.typeNotification =msg;
+   
+}
+
+function enterNotification(msg){
+    console.log('someone joins chatting....');
+    vm.enterNotification=msg;
+   
+}
+
+function leaveNotification(msg){
+    console.log('someone left....');
+    vm.leaveNotification =msg;
+   
+}
+
+
 //create vue instance
 const vm = new Vue({
     data:{
         socketID:"",
         nickname:"",
         message:"",
-        messages:[]
+        messages:[],
+        typeNotification:"",
+        enterNotification:"",
+        leaveNotification:""
+
 
     },
 
@@ -42,4 +66,19 @@ const vm = new Vue({
 
 socket.on('connected',logConnect);
 socket.addEventListener('chat message',appendMessage);
+//socket.addEventListener('tweet',appendMessage); 
+
+//listen for the typing event from the serve
+socket.addEventListener('typing',typingNotification);
+socket.addEventListener('enter',enterNotification);
+socket.addEventListener('leave',leaveNotification);
 socket.addEventListener('disconnect',appendMessage); //this one is optional
+
+//to browser
+window.addEventListener('keydown',function(){
+    socket.emit('typing',{user:vm.nickname || "Azusakaworu"});
+});
+
+
+
+

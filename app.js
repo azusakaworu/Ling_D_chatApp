@@ -22,7 +22,22 @@ io.attach(server);
 
 io.on('connection', function(socket){
     console.log('a user has connected');
+    //you have joined the chat session
     socket.emit('connected',{sID:`${socket.id}`,message:'new connection'});
+    //tell everyone that you're joined
+    io.emit('enter',`${socket.id} has joined the chat`)
+
+
+
+//listen for typing
+    socket.on('typing',function(msg){
+        //console.log('someone is typing a message');
+    
+        io.emit('typing',{id:`${socket.id}`,message:`${msg.user} is typing....`});
+
+
+    });
+
 
 
     //listen for an incoming message from anyone connected to the app
@@ -30,11 +45,13 @@ io.on('connection', function(socket){
            console.log('message:', msg,'socket:',socket.id);
 
            //send the msg to everyone connected to the app
-           io.emit('chat message',{id:`${socket.id}`,message:msg})
+           io.emit('chat message',{id:`${socket.id}`,message:msg});
+           //io.emit('tweet',{id:`${socket.id}`,message:msg});
      });
 
    socket.on('disconnect',function(){
        console.log('a user has disconnected');
+       io.emit('leave',`${socket.id} has left the chat`);
    });
 
 });
