@@ -2,16 +2,19 @@
 chat app last Trevor hw 
 
 ## Getting Started
+Connect master branch with the heroku chat app and set automatic deploys. Set localhost:3030 port in app.js. 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
 express, socket.io
 
 ```
-Give examples
+sudo npm i -g express-generator
+
+express Ling_HerkouTest --hbs
+
 ```
 
 ### Installing
@@ -21,20 +24,20 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+npm install
 ```
 
 And repeat
 
 ```
-until finished
+git init
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+npm start
 
 ### Break down into end to end tests
 
@@ -49,7 +52,12 @@ Give an example
 Explain what these tests test and why
 
 ```
-Give an example
+const port = process.env.PORT || 3030;
+
+const server = app.listen(port, () => {
+    console.log(`app is running on port ${port}`);
+});
+
 ```
 
 ## Deployment
@@ -58,9 +66,9 @@ https://www.heroku.com/home
 
 ## Built With
 
-* [Vue](http://www.dropwizard.io/1.0.2/docs/) - The Front-end web framework used
+* [Vue](https://vuejs.org/v2/guide/) - The Front-end web framework used
 * [Socket.IO](https://socket.io/) - Dependency Management
-* [Sass](https://rometools.github.io/rome/) - Used to generate CSS 
+* [Sass](https://sass-lang.com/) - Used to generate CSS 
 
 ## Contributing
 
@@ -68,11 +76,13 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
++ node@10.11.0
++ express@4.16.0
++ socket.io@2.2.0
 
 ## Authors
 
-* **Ling Ding** - *Developer* -
+* **Ling Ding** - *Developer & Designer* -
 
 
 ## License
