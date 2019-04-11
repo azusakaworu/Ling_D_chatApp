@@ -13,7 +13,7 @@ express
 ```
 sudo npm i -g express-generator
 
-express Ling_HerkouTest --hbs
+express Ling_D_ChatApp --hbs
 
 ```
 
@@ -29,7 +29,8 @@ socket.io
 npm install --save socket.io
 
 ```
-
+Create server variable for socket.io to use
+```
 var io = require('socket.io')();
 const port = process.env.PORT || 3030;
 
@@ -38,6 +39,15 @@ const server = app.listen(port, () => {
 });
 
 io.attach(server);
+```
+change package.json setting 
+```
+ "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  
+```
 
 
 ## Running the tests
@@ -45,6 +55,7 @@ io.attach(server);
 npm start
 
 ### Break down into end to end tests
+Ctrl+C 
 
 Explain what these tests test and why
 
