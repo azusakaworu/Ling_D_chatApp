@@ -35,9 +35,8 @@
 					<p>{{enterNotification}}</p>
 
 					<!-- reder a now component for every message -->
-
-					<transition name=fade>
-						<newmessage :msg="message"></newmessage>
+					<transition appear name="fade">
+						<newmessage :msg="message" ></newmessage>
 					</transition>
 					   
 				   

@@ -49,7 +49,7 @@ const vm = new Vue({
         typeNotification:"",
         enterNotification:"",
         leaveNotification:"",
-        // show: true,
+        // show: true
         // transitionName: 'fade'
         //msgcolor: "#"+((1<<24)*Math.random()|0).toString(16)
         
