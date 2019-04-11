@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-express, socket.io
+express
 
 ```
 sudo npm i -g express-generator
@@ -23,17 +23,16 @@ A step by step series of examples that tell you how to get a development env run
 
 Say what the step will be
 
-```
-npm install
-```
-
-And repeat
+socket.io
 
 ```
-git init
+npm install --save socket.io
+
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+var io = require('socket.io')();
+
+
 
 ## Running the tests
 
