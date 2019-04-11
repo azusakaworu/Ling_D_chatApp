@@ -31,7 +31,13 @@ npm install --save socket.io
 ```
 
 var io = require('socket.io')();
+const port = process.env.PORT || 3030;
 
+const server = app.listen(port, () => {
+    console.log(`app is running on port ${port}`);
+});
+
+io.attach(server);
 
 
 ## Running the tests
@@ -51,11 +57,6 @@ Give an example
 Explain what these tests test and why
 
 ```
-const port = process.env.PORT || 3030;
-
-const server = app.listen(port, () => {
-    console.log(`app is running on port ${port}`);
-});
 
 ```
 
