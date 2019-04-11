@@ -24,12 +24,14 @@ function typingNotification(msg){
 
 function enterNotification(msg){
     console.log('someone joins chatting....');
+    //socket.emit('enter',{user: vm.nickname ||"Azusakaworu" });
     vm.enterNotification = msg;
    
 }
 
 function leaveNotification(msg){
     console.log('someone left....');
+    //socket.emit('leave',{user: vm.nickname ||"Azusakaworu" });
     vm.leaveNotification = msg;
    
 }

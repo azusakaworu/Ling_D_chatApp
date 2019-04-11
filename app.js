@@ -25,7 +25,7 @@ io.on('connection', function(socket){
     //you have joined the chat session
     socket.emit('connected',{sID:`${socket.id}`,message:'new connection'});
     //tell everyone that you're joined
-    io.emit('enter',`${socket.id} has joined the chat`)
+    io.emit('enter',`${socket.id} has joined the chat`);
 
 
 
@@ -51,7 +51,8 @@ io.on('connection', function(socket){
      
    socket.on('disconnect',function(){
        console.log('a user has disconnected');
-       io.emit('leave',`${socket.id} has left the chat`);
+       io.emit('leave',`azusa has left the chat`);
+       //showed undefined...
    });
 
 });

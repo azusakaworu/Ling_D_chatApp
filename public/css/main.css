@@ -4,7 +4,8 @@
   padding: 0;
   box-sizing: border-box; }
 
-html, body {
+html,
+body {
   height: 100%; }
 
 body {
@@ -15,7 +16,8 @@ main {
   height: 100%;
   flex-direction: column-reverse; }
 
-.form-container, .messages {
+.form-container,
+.messages {
   padding: 20px; }
 
 .form-container {
@@ -28,13 +30,18 @@ main {
   .form-container #typingStyle {
     margin-top: 20px;
     color: #eee; }
+  .form-container input[type="text"]:focus {
+    border-color: #d02035;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #d02035;
+    outline: 0 none; }
 
 .messages {
   flex: 2;
   background-color: #282828;
   border: 1px solid #d02035; }
 
-input, textarea {
+input,
+textarea {
   display: block;
   width: 100%;
   border: 2px solid #bfcfd6;
@@ -50,7 +57,7 @@ textarea {
   float: left;
   width: 650px; }
   #textArea input {
-    margin: 10px  auto; }
+    margin: 10px auto; }
 
 #nameArea {
   float: left;
@@ -61,7 +68,7 @@ textarea {
 form {
   padding: 3px;
   margin: 12px auto; }
-  form input[type=submit] {
+  form input[type="submit"] {
     width: auto;
     padding: 10px;
     background-color: #d02035;
@@ -70,9 +77,13 @@ form {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: bold; }
-  form input[type=submit]:hover {
+  form input[type="submit"]:hover {
     background-color: white;
     color: #d02035; }
+  form textarea:focus {
+    border-color: #d02035;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #d02035;
+    outline: 0 none; }
 
 #messages {
   list-style-type: none;
