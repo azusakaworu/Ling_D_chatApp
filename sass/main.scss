@@ -10,22 +10,28 @@ body { font: 16px Helvetica, Arial; }
 main { 
 	display: flex;
 	height: 100%;
-	flex-direction: column;
+	flex-direction: column-reverse;
+	
 }
 .form-container, .messages { padding: 20px; }
 
 .form-container { 
 	flex: 1; 
-	border: 6px solid #bfcfd6;
-	background-color: #e3edf1;
+	border: 1px solid #d02035;
+	background-color: #797979;
 
 	label { display: block; margin-bottom: 0.5rem; }
+	#typingStyle{
+		margin-top: 20px;
+		color: #eee;
+		
+	}
 }
 
 .messages { 
 	flex: 2;
-	background-color: #eee;
-	border: 6px solid #e2e0e0; 
+	background-color:#282828;
+	border: 1px solid #d02035; 
 }
 
 input, textarea { 
@@ -39,8 +45,16 @@ input, textarea {
 	border-style: solid;
 }
 
-textarea { height: 135px; }
+textarea { height: 100px; }
+#textArea{float: left;width: 650px;
+   input{
+	  margin: 10px  auto;
+	   
 
+   }
+
+}
+#nameArea{float: left;margin-right: 100px;width: 300px;margin-left: 80px;}
 
 
 form {
@@ -49,15 +63,21 @@ form {
 	margin: 12px auto;
 
 	input[type=submit] { 
+		
 		width: auto; 
 		padding: 10px; 
-		background-color: rgb(75, 200, 17);
+		background-color: #d02035;
 		margin-top: 1rem; 
-		border-radius: 8px;
+		
 		color: white;
 		cursor: pointer;
 		text-transform: uppercase;
 		font-weight: bold;
+	}
+
+	input[type=submit]:hover{
+		background-color:white;
+		color: #d02035 ;
 	}
 }
 

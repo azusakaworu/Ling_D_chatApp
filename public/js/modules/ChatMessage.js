@@ -8,11 +8,14 @@ export default{
            {{msg.message.content}}
         </P>
     
+        
     
     
     `,
     data:function(){
         return {matchedID: this.$parent.socketID == this.msg.id}
 
-    }
+    },
+
+   
 }

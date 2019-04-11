@@ -1,7 +1,5 @@
 import ChatMessage from './modules/ChatMessage.js';
 const socket = io();
-// const el = document.querySelector('.transition');
-
 
 
 function logConnect({sID,message}){//
@@ -68,6 +66,7 @@ const vm = new Vue({
 
 
         }
+
     },
 
     components:{//在这里注册一下

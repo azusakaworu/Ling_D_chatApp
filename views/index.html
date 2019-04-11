@@ -10,7 +10,32 @@
 
 <body>
 	<main id="app">
-		<section class="messages">
+		<section class="form-container">
+			<div id="nameArea">
+				<label for="nickname">Nickname</label>
+				<input v-model="nickname" type="text" id="nickname" class="nickname"
+					placeholder="Nickname(optional)">
+					<p id="typingStyle">{{typeNotification.message}}</p>
+			</div>
+
+        <div id="textArea">
+			<form>
+				<label for="message"></label>
+				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea" placeholder="Something to say?"></textarea>
+				<input type="submit" @click.prevent="dispatchMessage">
+			</form>
+		</div>
+			
+
+			
+
+		</section>
+
+
+
+
+
+		<section class="messages scroller">
 
 			<p class="joinLeaveNoti">{{enterNotification}}</p>
 			<ul id="messages" v-for="message in messages">
@@ -20,37 +45,10 @@
 				<transition appear name="fade">
 					<newmessage :msg="message"></newmessage>
 				</transition>
-
-
-
-
-
 			</ul>
 
 			<p class="joinLeaveNoti">{{leaveNotification}}</p>
 		</section>
-
-
-
-		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
-			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
-
-			<form>
-				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input type="submit" @click.prevent="dispatchMessage">
-			</form>
-
-			<p>{{typeNotification.message}}</p>
-
-		</section>
-
-
-
-
-
-
 
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
