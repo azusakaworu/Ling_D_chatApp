@@ -1,10 +1,13 @@
 # Ling_D_chatApp
-chat app last Trevor hw 
+Chat app -last Trevor hw.
+To create an interactive chat application through using Node.js and socket.io. Design custom skin and add trasition effect.
+Show the notification message when a user joins or leaves the chat, use colour to differentiate between user messages.
 
 ## Getting Started
-Connect master branch with the heroku chat app and set automatic deploys. Set localhost:3030 port in app.js. 
+1.Creat new app in https://dashboard.heroku.com/new-app
+2.Set Node.js as the Buildpacks.
+3.Connect master branch with the heroku chat app and set automatic deploys. 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
@@ -29,17 +32,21 @@ socket.io
 npm install --save socket.io
 
 ```
-Create server variable for socket.io to use
+Set localhost:3030 port in app.js. 
 ```
 var io = require('socket.io')();
 const port = process.env.PORT || 3030;
+```
 
+Create server variable for socket.io to use
+```
 const server = app.listen(port, () => {
     console.log(`app is running on port ${port}`);
 });
 
 io.attach(server);
 ```
+
 change package.json setting 
 ```
  "main": "app.js",
