@@ -10,9 +10,10 @@ body { font: 16px Helvetica, Arial; }
 main { 
 	display: flex;
 	height: 100%;
-	flex-direction: row;
+	flex-direction: column;
 }
 .form-container, .messages { padding: 20px; }
+
 .form-container { 
 	flex: 1; 
 	border: 6px solid #bfcfd6;

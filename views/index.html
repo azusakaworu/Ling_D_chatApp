@@ -10,6 +10,28 @@
 
 <body>
 	<main id="app">
+		<section class="messages">
+
+			<p class="joinLeaveNoti">{{enterNotification}}</p>
+			<ul id="messages" v-for="message in messages">
+
+
+				<!-- reder a now component for every message -->
+				<transition appear name="fade">
+					<newmessage :msg="message"></newmessage>
+				</transition>
+
+
+
+
+
+			</ul>
+
+			<p class="joinLeaveNoti">{{leaveNotification}}</p>
+		</section>
+
+
+
 		<section class="form-container">
 			<label for="nickname">Your Nickname (optional)</label>
 			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
@@ -28,25 +50,7 @@
 
 
 
-		<section class="messages">
-			<!-- transition  -->
-			
-				<ul id="messages" v-for="message in messages">
-					<p>{{enterNotification}}</p>
 
-					<!-- reder a now component for every message -->
-					<transition appear name="fade">
-						<newmessage :msg="message" ></newmessage>
-					</transition>
-					   
-				   
-					
-
-					<p>{{leaveNotification}}</p>
-				</ul>
-			
-
-		</section>
 
 	</main>
 	<script src="/socket.io/socket.io.js"></script>

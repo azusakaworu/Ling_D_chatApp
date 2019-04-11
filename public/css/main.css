@@ -13,7 +13,7 @@ body {
 main {
   display: flex;
   height: 100%;
-  flex-direction: row; }
+  flex-direction: column; }
 
 .form-container, .messages {
   padding: 20px; }
@@ -69,7 +69,7 @@ form {
 .new-message {
   width: 45%;
   padding: 8px 12px;
-  background-color: wheat;
+  background-color: white;
   border-radius: 8px;
   margin-bottom: 1rem;
   float: left;
@@ -84,10 +84,21 @@ form {
   background-color: #86bf9d;
   color: white; }
 
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
-  }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s; }
+
+.fade-enter, .fade-leave-to {
+  opacity: 0; }
+
+.joinLeaveNoti {
+  margin: 20px auto;
+  font-size: 0.8em;
+  font-weight: lighter;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  text-align: center;
+  width: 400px;
+  color: grey; }
+
 /*# sourceMappingURL=main.css.map */
