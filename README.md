@@ -8,6 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 What things you need to install the software and how to install them
+express, socket.io
 
 ```
 Give examples
@@ -53,13 +54,13 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+https://www.heroku.com/home
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Vue](http://www.dropwizard.io/1.0.2/docs/) - The Front-end web framework used
+* [Socket.IO](https://socket.io/) - Dependency Management
+* [Sass](https://rometools.github.io/rome/) - Used to generate CSS 
 
 ## Contributing
 
@@ -71,16 +72,16 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Ling Ding** - *Developer* -
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License 
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* https://vuejs.org/v2/guide/transitions.html
+* https://socket.io/
+* https://stackoverflow.com/questions/16156594/how-to-change-border-color-of-textarea-on-focus
+* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars
