@@ -4,7 +4,7 @@ To create an interactive chat application through using Node.js and socket.io. D
 Show the notification message when a user joins or leaves the chat, use colour to differentiate between user messages.
 
 ## Getting Started
-1. First ordered list item
+
 1. Creat new app in https://dashboard.heroku.com/new-app
 2. Set Node.js as the Buildpacks.
 3. Connect master branch with the heroku chat app and set automatic deploys. 
@@ -22,10 +22,6 @@ express Ling_D_ChatApp --hbs
 ```
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
 
 socket.io
 
@@ -57,27 +53,6 @@ change package.json setting
   
 ```
 
-
-## Running the tests
-
-npm start
-
-### Break down into end to end tests
-Ctrl+C 
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-
-```
 
 ## Deployment
 
