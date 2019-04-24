@@ -12,14 +12,8 @@ Show the notification message when a user joins or leaves the chat, use colour t
 
 ### Prerequisites
 
-express
+express  socket.io
 
-```
-sudo npm i -g express-generator
-
-express Ling_D_ChatApp --hbs
-
-```
 
 ### Installing
 
@@ -29,34 +23,14 @@ socket.io
 npm install --save socket.io
 
 ```
-Set localhost:3030 port in app.js. 
-```
-var io = require('socket.io')();
-const port = process.env.PORT || 3030;
-```
 
-Create server variable for socket.io to use
-```
-const server = app.listen(port, () => {
-    console.log(`app is running on port ${port}`);
-});
 
-io.attach(server);
-```
-
-change package.json setting 
-```
- "main": "app.js",
-  "scripts": {
-    "start": "node app"
-  },
-  
-```
 
 
 ## Deployment
 
-https://www.heroku.com/home
+https://ling-chatapp.herokuapp.com/
+
 
 ## Built With
 
